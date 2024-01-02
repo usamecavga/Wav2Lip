@@ -11,6 +11,8 @@ async def handle_connection(websocket, path):
         # Receive parameters from the WebSocket connection
         parameters = await websocket.recv()
 
+        print(f"parameters: {parameters}")
+
         # Run the interface.py script with the received parameters
         subprocess.run(["python3", "/workspace/Wav2Lip/interface.py"] + parameters.split(), check=True)
     except Exception as e:
