@@ -14,7 +14,7 @@ async def handle_connection(websocket, path):
         print(f"parameters: {parameters}")
 
         # Run the interface.py script with the received parameters
-        subprocess.run(["python3", "/workspace/Wav2Lip/interface.py"] + parameters.split(), check=True)
+        subprocess.run(["python3", "/workspace/Wav2Lip/inference.py"] + parameters.split(), check=True)
     except Exception as e:
         print(f"Error: {e}")
 
