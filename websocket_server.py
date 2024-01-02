@@ -2,6 +2,9 @@ import asyncio
 import websockets
 import subprocess
 import sys
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
 
 async def handle_connection(websocket, path):
     try:
